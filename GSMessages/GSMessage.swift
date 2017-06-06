@@ -63,7 +63,7 @@ extension UIView {
 
 }
 
-public class GSMessage {
+open class GSMessage {
 
     public static var font : UIFont = UIFont.systemFont(ofSize: 14)
     public static var successBackgroundColor : UIColor = UIColor(red: 142.0/255, green: 183.0/255, blue: 64.0/255,  alpha: 0.95)
