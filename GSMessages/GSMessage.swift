@@ -74,7 +74,7 @@ open class GSMessage {
     public class func showMessageAddedTo(_ text: String, type: GSMessageType, options: [GSMessageOption]?, inView: UIView, inViewController: UIViewController?) {
         if inView.installedMessage != nil && inView.uninstallMessage == nil { inView.hideMessage() }
         if inView.installedMessage == nil {
-            GSMessage(text: text, type: type, options: options, inView: inView, inViewController: inViewController).show()
+            self.init(text: text, type: type, options: options, inView: inView, inViewController: inViewController).show();
         }
     }
 
@@ -157,7 +157,7 @@ open class GSMessage {
 
     public var messageHeight: CGFloat { return offsetY + height }
 
-    public init(text: String, type: GSMessageType, options: [GSMessageOption]?, inView: UIView, inViewController: UIViewController?) {
+    public required init(text: String, type: GSMessageType, options: [GSMessageOption]?, inView: UIView, inViewController: UIViewController?) {
 
         var inView = inView
         
